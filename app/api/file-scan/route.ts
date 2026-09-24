@@ -2,8 +2,8 @@ import { NextResponse } from 'next/server'
 import crypto from 'node:crypto'
 import type { FileScanResult } from '@/lib/types'
 
-// نقرأ بايتات الملف فقط، ما نشغّله أبداً
-const MAX_SIZE = 25 * 1024 * 1024 // 25MB
+
+const MAX_SIZE = 25 * 1024 * 1024 
 
 const MAGIC_SIGNATURES: { hex: string; type: string }[] = [
   { hex: '4d5a', type: 'ملف تنفيذي Windows (PE/EXE/DLL)' },
